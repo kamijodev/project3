@@ -32,9 +32,6 @@ body{
     padding-top: 1rem;
     
   }
-ul{
-  list-style: square;
-}
   
 li {
   margin: 1rem 1rem 1rem 0;
@@ -44,7 +41,7 @@ li {
   width: 130px;
   justify-content: space-between;
   border-radius: 5px;
-
+  cursor: grab;
   }
 .flex{
   display: flex;

@@ -27,7 +27,7 @@ $(() => {
             }
           });
         // 削除ボタン作成
-        const deleteBtn = $('<button>').text('✕').click(() => {
+        const deleteBtn = $('<button>').text('✕').css('background','silver').click(() => {
           $(item).remove();
         });
         // 削除ボタンをタスク要素に追加する
