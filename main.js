@@ -17,7 +17,7 @@ $(() => {
     const addTasks = (taskText) => {
         // ドラッグ可能なタスクの要素を作成
         const item =
-          $('<li>').text(taskText).append(
+          $('<li>').text('・').append(
           ).draggable({
             start() {
               $(this).addClass('dragNow');
@@ -26,11 +26,15 @@ $(() => {
               $(this).removeClass('dragNow');
             }
           });
+        const div = $('<div>').text(taskText).css('width', '100%').css('background', '#fff565');
+
         // 削除ボタン作成
         const deleteBtn = $('<button>').text('✕').css('background','silver').click(() => {
           $(item).remove();
         });
-        // 削除ボタンをタスク要素に追加する
+        // divをitemに追加する
+        $(item).append(div);
+        // 削除ボタンをitemに追加する
         $(item).append(deleteBtn);
         // 作った要素をリストに追加
         $('#name-list').append(item);
